@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 4</title>
+</head>
+<body style="margin: 10em; padding: 0; background-color: palevioletred;">
+    <div class="penjumlahan" style="display: flex; align-items: center; justify-content: center;">
+        <form name="form">
+            <h1 style="text-align: center; font-style: oblique;">Menghitung Jumlah Dua Bilangan</h1>
+            <h3 style="text-align: center;">Masukan Angka</h3>
+            <input type=text name="angka1" size=3>
+            <h3>+</h3>
+            <input name="angka2" type="text" size="3" /><br><br>
+            <input type=button name=submit onclick="tambah()" value="="><br><br>
+            <input type="text" value="" name="total" size="9">
+            <!-- membuat event ketika tombol di klik maka memanggil function javascript -->
+            
+       </form>
+
+       <script>
+            function cek(){
+                if(form.angka1.value == "" || form.angka2.value == ""){
+                    alert("data kosong"); //jika angka kosong maka pesan akan tampil
+                    exit;
+                }
+            }
+            function tambah() {
+                cek(); //panggil function cek
+                a=eval(form.angka1.value); //mengisi variabel a dengan isi dari input name angka1
+                b=eval(form.angka2.value); //mengisi variabel b dengan isi dari input name angka2
+                c=a+b //menjumlahkan kedua variabel
+                form.total.value = c; //memberikan hasil penjumlahan ke input name total
+            }
+       </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2</title>
+    <script>
+        function kursrp(usd) {
+            var datausd = parseInt(usd);
+            document.getElementById("totalkonversi").value = datausd * 14650;
+        }
+    </script>
+</head>
+
+<body style="background-color: palevioletred;">
+    <div style="text-align: center; margin-top: 200px;">
+        <p><h1>Kurs Dollar ke Rupiah 1 USD = Rp.14.650</h1></p>
+        <br>
+        <p>Masukan USD: <input type="text" name="usd" onchange="kursrp(this.value)"></p>
+        <br>
+        <p>Hasil Rupiah: <input type="text" id="totalkonversi" disabled></p>
+    </div>
+</body>
+</html>
